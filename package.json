@@ -4,9 +4,11 @@
   "private": true,
   "jest": {
     "transform": {
-      "^.+\\.js$": "babel-jest"    }
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "^5.0.1"
@@ -16,14 +18,16 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "mocha": "^8.2.1"
+    "mocha": "^8.2.1",
+    "vite": "^7.0.6"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
     "test": "echo \".results.json\" && react-scripts test --reporters=@learn-co-curriculum/jest-learn-reporter --reporters=default --watchAll",
     "eject": "react-scripts eject"
-  },
+},
   "eslintConfig": {
     "extends": [
       "react-app"
